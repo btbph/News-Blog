@@ -1,0 +1,5 @@
+<% @authors.each do |item| %>
+  <div>
+    <%= link_to item.name, authors_path(item) %>
+  </div>
+<% end %>
