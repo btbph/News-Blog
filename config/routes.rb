@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resource :authors
+  resources :authors, shallow: true do
+    resources :articles
+  end
 
   root 'authors#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

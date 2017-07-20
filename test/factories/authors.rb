@@ -1,10 +1,9 @@
 FactoryGirl.define do
   factory :author do
-    name "MyString"
-    email "MyString"
-    city "MyString"
-    address "MyString"
-    birthday "2017-07-18"
-    id "MyString"
+    name { Faker::Name.unique.name }
+    email { Faker::Internet.unique.email }
+    city { Faker::Address.city }
+    address { Faker::Address.street_address }
+    birthday { Faker::Date.birthday }
   end
 end

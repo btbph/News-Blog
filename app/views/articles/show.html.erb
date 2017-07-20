@@ -1,0 +1,12 @@
+<% @article.comments.each do |comment|  %>
+    <div>
+      <%= comment.body  %>
+    </div>
+<% end %>
+
+<% @tags.each do |tag| %>
+
+<li>
+  <%= tag.name %>
+</li>
+<% end %>

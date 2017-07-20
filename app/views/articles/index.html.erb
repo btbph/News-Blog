@@ -1,0 +1,7 @@
+
+<% @author.articles.each do |article| %>
+    <div class="container">
+      <%= link_to article.header, article_path(article)%>
+      <%= article.text %>
+    </div>
+<% end %>
