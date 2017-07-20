@@ -1,7 +1,9 @@
 
-<% @author.articles.each do |article| %>
+<% @articles.each do |article| %>
     <div class="container">
       <%= link_to article.header, article_path(article)%>
       <%= article.text %>
     </div>
 <% end %>
+<%= paginate @articles %>
+<%= page_entries_info @articles %>
