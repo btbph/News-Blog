@@ -1,12 +1,25 @@
-<% @article.comments.each do |comment|  %>
-    <div>
-      <%= comment.body  %>
-    </div>
-<% end %>
+<div>
+  <%=  @article.header %>
+  <%= @article.text %>
+</div>
 
-<% @tags.each do |tag| %>
+<div>
+  Теги:
+  <% @tags.each do |tag| %>
+      <span>
+        <%= tag.name %>
+      </span>
+  <% end %>
+</div>
 
-<li>
-  <%= tag.name %>
-</li>
-<% end %>
+<div>Коменатарии:
+  <% @article.comments.each do |comment|  %>
+      <div> Имя: <%= comment.commenter %></div>
+      <div> Текст: <%= comment.body %> </div>
+  <% end %>
+</div>
+
+
+
+
+
