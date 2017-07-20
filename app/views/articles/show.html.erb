@@ -1,0 +1,25 @@
+<div>
+  <%=  @article.header %>
+  <%= @article.text %>
+</div>
+
+<div>
+  Теги:
+  <% @tags.each do |tag| %>
+      <span>
+        <%= tag.name %>
+      </span>
+  <% end %>
+</div>
+
+<div>Коменатарии:
+  <% @article.comments.each do |comment|  %>
+      <div> Имя: <%= comment.commenter %></div>
+      <div> Текст: <%= comment.body %> </div>
+  <% end %>
+</div>
+
+
+
+
+
